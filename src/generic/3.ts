@@ -3,7 +3,7 @@
   Використовуйте generics, щоб вказати, що ці об'єкти можуть бути будь-якого типу.
 */
 
-function merge<T extends object, S extends object>(objA:T, objB:S) {
+function merge<T extends object, S extends object>(objA:T, objB:S): T & S  {
   return Object.assign(objA, objB);
 }
 // const merged = merge({ name: 'Alisa' }, { age: 28 });
